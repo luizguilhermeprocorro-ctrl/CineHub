@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+a {
+    text-shadow: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 4%;
+    background-color: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #ff003c;
+}
+
+.movies-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.searchForm {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.searchInput {
+    background-color: #222;
+    border: 1px solid #444;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.searchInput:focus {
+    border-color: #ff003c;
+}
+
+.searchButton {
+    background-color: #ff003c;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.searchButton:hover {
+    background-color: #d60032;
+}
+
+.categoryContainer {
+    display: flex;
+    gap: 0.8rem;
+    margin: 20px 4%;
+}
+
+.categoryButton {
+    background-color: #22252a;
+    color: #ffffff;
+    border: 2px solid #33373e;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.categoryButton:hover {
+    background-color: #e50914;
+    border-color: #e50914;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.3);
+}
+
+.categoryButton.active {
+    background-color: #e50914;
+    border-color: #e50914;
+    box-shadow: 0 4px 12px rgba(229, 9, 20, 0.4);
+}
+
+.movie-details__container {
+    position: relative;
+    min-height: 70vh;
+    color: #ffffff;
+    padding: 40px 0;
+}
+
+.movie-details__back-button {
+    background: #e50914;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 30px;
+    transition: background 0.2s ease;
+}
+
+.movie-details__back-button:hover {
+    background: #b80710;
+}
+
+.movie-details__wrapper {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.movie-details__poster-wrapper {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.movie-details__poster {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.movie-details__content {
+    flex: 1;
+}
+
+.movie-details__content h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.movie-details__info-row {
+    display: flex;
+    gap: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.movie-details__info-row span {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.movie-details__info-row span:first-child {
+    color: #46d369;
+}
+
+.movie-details__overview {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #cccccc;
+    max-width: 700px;
+}
+
+.movie-detail__favorite-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin: 10px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #e50914;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0. ease;
+}
+
+.movie-details__favorite-button:hover {
+    background-color: #b80710;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.movie-details__favorite-button:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    font-family: sans-serif;
+}
+
+.login-card {
+    background-color: #1c1c1e;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.login-card h2 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    color: #e50914;
+    text-align: center;
+}
+
+.login-card p {
+    margin: 0 0 30px 0;
+    color: #aaa;
+    font-size: 14px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #ddd;
+    font-weight: 500;
+}
+
+.input-group input {
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2c2c2e;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #e50914;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #e50914;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #b80710;
+}
+
+.btn-entrar {
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.btn-entrar:hover {
+    background-color: #b80710;
+}
