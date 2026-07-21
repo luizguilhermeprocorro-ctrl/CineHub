@@ -34,7 +34,7 @@ function Login() {
 
     return (
         <div className="login-container">
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className="login-form">
                 <h2>CineHub</h2>
                 <p>Faça login para acessar seus filmes favoritos</p>
 
