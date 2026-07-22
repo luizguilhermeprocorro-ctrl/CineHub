@@ -37,8 +37,4 @@ Durante o desenvolvimento, foram aplicados padrões recomendados pelo mercado:
 
 ---
 
-## 🔧 Como Executar o Projeto Localmente
-
-### 1. Clonar o repositório
-```bash
-git clone [https://github.com/seu-usuario/cinehub.git](https://github.com/seu-usuario/cinehub.git)
+Link do deploy (https://cine-hub-akh4.vercel.app/)
