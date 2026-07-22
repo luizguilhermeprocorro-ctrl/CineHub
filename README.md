@@ -1,10 +1,10 @@
-# 🎬 CineHub
+CineHub
 
 O **CineHub** é uma aplicação web moderna para exploração de filmes, que consome dados em tempo real da API do TMDB (The Movie Database). O projeto foi desenvolvido com foco em performance, componentização eficiente e excelentes práticas de UI/UX, oferecendo uma experiência fluida e responsiva para o usuário.
 
 ---
 
-## 🚀 Funcionalidades Atuais
+Funcionalidades Atuais
 
 * **Listagem Dinâmica:** Renderização dos filmes populares diretamente da API assim que a página carrega.
 * **Busca em Tempo Real:** Campo de pesquisa textual para encontrar qualquer filme do catálogo.
@@ -16,7 +16,7 @@ O **CineHub** é uma aplicação web moderna para exploração de filmes, que co
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+Tecnologias Utilizadas
 
 O projeto foi construído utilizando as seguintes tecnologias e conceitos:
 
@@ -28,7 +28,7 @@ O projeto foi construído utilizando as seguintes tecnologias e conceitos:
 
 ---
 
-## 📐 Conceitos Arquiteturais Aplicados
+Conceitos Arquiteturais Aplicados
 
 Durante o desenvolvimento, foram aplicados padrões recomendados pelo mercado:
 * **Lifting State Up (Elevação de Estado):** Passagem de dados e parâmetros de componentes filhos para componentes pais via propriedades (*props*).
