@@ -1,6 +1,6 @@
 .card {
     width: 200px;
-    background-color: #1c1c1c;
+    background-color: #6d6a6a;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
@@ -10,6 +10,7 @@
     gap: 0.5rem;
     padding-bottom: 0.8rem;
     align-items: center;
+    text-align: center;
 }
 
 .card:hover {

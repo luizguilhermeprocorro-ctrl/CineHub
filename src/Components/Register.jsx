@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../data/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth"
+import { Link } from "react-router-dom";
 
 function Register() {
     const [registerEmail, setRegisterEmail] = useState("")
@@ -23,13 +24,26 @@ function Register() {
             console.log("Cadastro feito com sucesso")
             navigate("/")
         } catch (registerError) {
-            setRegisterError(registerError.code)
+            if (registerError.code === "auth/email-already-in-use") {
+                setRegisterError("Este e-mail já está cadastrado")
+            }
+            else if (registerError.code === "auth/weak-password") {
+                setRegisterError("A senha deve ter pelo menos 6 caracteres")
+            }
+            else if (registerError.code === "auth/invalid-email") {
+                setRegisterError("Por favor insira um e-mail válido")
+            }
+            else if (registerError.code === "auth/missing-password") {
+                setRegisterError("A senha não pode estar em branco")
+            } else {
+                setRegisterError("Ocorreu um erro ao tentar cadastrar, por favor tente novamente")
+            }
         }
     }
 
     return (
         <div className="login-container">
-            <form onSubmit={handleRegister}>
+            <form onSubmit={handleRegister} className="login-form">
                 <h2>CineHub</h2>
                 <p>Faça seu cadastro para acessar nosso catálogo dos melhores filmes</p>
                 <div className="input-group">
@@ -58,6 +72,7 @@ function Register() {
                 </div>
                 {registerError && <p className="error-message">{registerError}</p>}
                 <button type="submit" className="btn-enviar">Cadastre-se</button>
+                <p>já tem uma conta? <Link to="/login">login</Link></p>
             </form>
         </div>
     )

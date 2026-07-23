@@ -11,21 +11,24 @@ function CategoryFilters(props) {
 
     return (
         <div className="categoryContainer">
-            <button
-                onClick={() => props.onCategorySelect(null)}
-                className={props.activeCategoryId === null ? "categoryButton active" : "categoryButton"}
+            <h3>Escolha seu tema preferido</h3>
+            <div className="container-filters">
+                <button
+                    onClick={() => props.onCategorySelect(null)}
+                    className={props.activeCategoryId === null ? "categoryButton active" : "categoryButton"}
                 >Todos</button>
-            {genres.map((movie) => {
-                return (
-                    <button
-                        key={movie.id}
-                        className={props.activeCategoryId === movie.id ? "categoryButton active" : "categoryButton"}
-                        onClick={() => props.onCategorySelect(movie.id)}    
-                    >
-                        {movie.name}
-                    </button>
-                )
-            })}
+                {genres.map((movie) => {
+                    return (
+                        <button
+                            key={movie.id}
+                            className={props.activeCategoryId === movie.id ? "categoryButton active" : "categoryButton"}
+                            onClick={() => props.onCategorySelect(movie.id)}
+                        >
+                            {movie.name}
+                        </button>
+                    )
+                })}
+            </div>
         </div>
     )
 }

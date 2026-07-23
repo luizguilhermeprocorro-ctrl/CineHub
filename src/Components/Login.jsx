@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { auth } from "../data/firebase"
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 function Login() {
     const navigate = useNavigate()
@@ -56,6 +57,9 @@ function Login() {
                 </div>
                 {error && <p className="error-message">{error}</p>}
                 <button type="submit" className="btn-enviar">Entrar</button>
+                <p>
+                    Ainda não tem uma conta? <Link to="/register">Cadastre-se</Link>
+                </p>
             </form>
         </div>
     )

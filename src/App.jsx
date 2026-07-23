@@ -8,6 +8,7 @@ import CategoryFilters from './Components/CategoryFilters'
 import MovieDetails from './Components/MovieDetails'
 import Login from './Components/Login'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from './Components/Register'
 
 function App() {
   const [listOfMovies, setListOfMovies] = useState([]);
@@ -122,6 +123,7 @@ function App() {
         } />
 
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
       </Routes>
     </BrowserRouter>
